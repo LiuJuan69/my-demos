@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片压缩小工具</title>
+	<link rel="stylesheet" href="./css/canvas.css">
+</head>
+<body>
+	<!-- 文件标题 -->
+	<h2>多图压缩工具</h2>
+	
+	<div id="k">
+		<!-- 选择文件 -->
+		（可多选）<input type="file" id="UpLoad" accept="png,gif,jpg,jpeg" click="UpLoad(this)" multiple>
+		<!-- 统一压缩比 -->
+		<select name="" id="chose_all">
+			<option value="0.1">模糊0.1</option>
+			<option value="0.2">模糊0.2</option>
+			<option value="0.3">模糊0.3</option>
+			<option value="0.4">模糊0.4</option>
+			<option value="0.5">模糊0.5</option>
+			<option value="0.6">模糊0.6</option>
+			<option value="0.7" selected = "selected">模糊0.7</option>
+			<option value="0.8">模糊0.8</option>
+			<option value="0.9">模糊0.9</option>
+		</select>
+		<!-- 全部压缩 -->
+		<button class="star_all">全部压缩</button>
+		<!-- 压缩图另存 -->
+		<button class="save">保存压缩图</button>		
+	</div>
+	<div id="wrapbox">
+<!-- 		<div class="wrap">
+	选中图片的展示图（缩略图）
+	<div class="old">
+		<div class="y_small">
+			<img src="./imgs/y_Simg.png" alt="" class="y_Simg">
+		</div>
+		<div class="y_big">
+			<img src="" alt="" class="y_Bimg">
+		</div>
+		<div class="y_size">size:</div>
+	</div>
+	可以选择的按钮
+	<div class="btn">
+		图片绘制模糊程度，数值越大越清楚
+		<select name="" class="chose">
+			<option value="0.1">模糊0.1</option>
+			<option value="0.2">模糊0.2</option>
+			<option value="0.3">模糊0.3</option>
+			<option value="0.4">模糊0.4</option>
+			<option value="0.5">模糊0.5</option>
+			<option value="0.6">模糊0.6</option>
+			<option value="0.7" selected = "selected">模糊0.7</option>
+			<option value="0.8">模糊0.8</option>
+			<option value="0.9">模糊0.9</option>
+		</select>
+		<button class="star">压缩</button>
+	</div> 
+	压缩后的图片（缩略图）
+	<div class="new">
+		<div class="n_small">
+			<a class="a" href="javascript:void(0)"><img src="./imgs/n_Simg.png" alt="" class="n_Simg" style="width:100%;height:100%" ></a>
+		</div>
+		<div class="n_big">
+			<img src="" alt="" class="n_Bimg">
+		</div>
+		<div class="n_size">size:</div>
+		<div class="n_bi">占原图：0%</div>
+	</div>
+</div>
+<canvas class="canvas" style="position:relative;display:none" ></canvas> -->
+	</div>
+	
+	<script src="./js/jquery-2.1.1.js"></script>
+	<script src="./js/canvas.js"></script>
+</body>
+</html>

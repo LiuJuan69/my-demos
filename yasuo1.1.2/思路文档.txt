@@ -1,0 +1,27 @@
+多图压缩工具实现思路
+1、通过file选择要压缩的图片
+2、将选中的图片展示在old中，只显示缩略图，鼠标点击显示原图大图
+3、通过中间的按钮选择压缩比，点击压缩canvas进行重绘
+4、重绘后的图片显示在new中，只显示缩略图，鼠标点击显示压缩后的大图
+5、两张大图可以并列，易于观察
+6、压缩后的图片可以统一另存
+
+base64转成文件大小的方法
+例：
+1、这是一段base64编码（用str代替）
+data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAB9SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/6mHbP+LXDf/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//i104/5lwT/+RZkP/fksh/6eFaP/8/Pv/mG9N/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/+tjHL/6uHb//7+/v////////////Xx7v/8+/r//////6N/Yv99SR//fUkf/31JH/99SR//fUkf/35LIf/PvK3///////////////////////////////////////////+vj3b/fUkf/31JH/99SR//fUkf/31JH/++pI/////////////08Oz/vqSQ/8y3p///////////////////////u6CK/31JH/99SR//fUkf/31JH/+IWDL/+vn3///////s5d//iVo1/6B7XP/6+ff/8Orl/9TDtv+5nYb/nXZX/4NRKf9+SyL/fUkf/31JH/99SR//sJF3////////////onxe/35LIv+ge1z/ils1/31JH/99SR//fUkf/6qIbf/dz8T/1MK0/31JH/99SR//fUkf/8WunP///////Pv7/39MIv99SR//fUkf/31JH/99SR//fUkf/31JH//ay7///////+ri2/99SR//fUkf/31JH//Frpv///////38+/9/TCP/fUkf/31JH/99SR//fUkf/31JH/99SR//2szA///////q4dv/fUkf/31JH/99SR//r491////////////pIBi/31JH/99SR//fUkf/31JH/99SR//hVUt//j29P//////1MK1/31JH/99SR//fUkf/4dXMP/59/b//////+7o4/+MXjn/fUkf/31JH/99SR//gE0k/9XFuP///////////6aDZ/99SR//fUkf/31JH/99SR//up+I////////////9vPw/8OrmP+si3D/uZ2G/+ri2////////////97Rx/99SiD/fUkf/31JH/99SR//fUkf/31KIP/KtqX//v7+/////////////////////////////////+Xb0/+HWDH/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/6eFaP/l2tL//v7+////////////8evn/7yhi/+BTyb/fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/99SR//fUkf/4dXMP+Uakf/jV86/31JH/99SR//fUkf/31JH/99SR//fUkf/31JH/9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/f0sh/39LIf9/SyH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+2、需要计算文件流大小，首先把头部的data:image/png;base64,（注意有逗号）去掉
+	str=str.substring(22);
+3、找到编码中的"="也去掉
+	var equalIndex= str.indexOf(‘=’);
+	if(str.indexOf(‘=’)>0){
+		str=str.substring(0, equalIndex);
+	}
+4、获取原来字符流的大小，单位为字节
+	var strLength=str.length;
+5、通过计算，得到文件流的大小，单位为字节
+	var fileLength=parseInt(strLength-(strLength/8)*2)；
+6、通过换算，输出成字符串
+	if (fileLength > 1024 * 1024) Size = (Math.round(fileLength * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+	else Size = (Math.round(fileLength * 100 / 1024) / 100).toString() + 'KB';
+	console.log(Size);
