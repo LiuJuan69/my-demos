@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>聊天页面</title>
+</head>
+<body>
+	<!-- 右下角的客服框 -->
+	<div id="miniBox">
+		在线客服&lt;&lt;
+	</div>
+
+	<!-- 右下角的新消息提示 -->
+	<div id="miniHint">
+		<div class="msgBox">您收到一条新消息<i class="icon">1</i></div>
+	</div>
+	<!-- 聊天框 -->
+	<div id="chatBox">
+		<div id="chatUserList">
+		    <div class="headImg">
+		    	<img src="./images_gb/3.jpg" alt="">
+		    	<span>客服萌萌</span>
+		    </div>
+		    <div class="searchUser">
+		    	<input type="text" placeholder="请输入用户名" name="username">
+		    	<button class="search"></button>
+		    </div>
+			<ul class="chatUserImg">
+				<li class="userList">
+					<img src="./images_gb/2.jpg" alt="" class="userImg">
+					<span class="userName">你说啥</span>
+					<i class="time">2017-08-08</i>
+					<i class="hint"></i>
+				</li>
+				<li class="userList">
+					<img src="./images_gb/1.png" alt="" class="userImg">
+					<span class="userName">再说一遍</span>
+					<i class="time">2017-08-08</i>
+					<i class="hint"></i>
+				</li>
+				<li class="userList">
+					<img src="./images_gb/1.jpg" alt="" class="userImg">
+					<span class="userName">就说敢不敢</span>
+					<i class="time">2017-08-08</i>
+					<i class="hint"></i>
+				</li>
+			</ul>
+		</div>
+		<!-- 聊天框 -->
+		<div id="chatUser">
+			<div class="close">×</div>
+			<div class="userHead">
+				<img src="./images_gb/1.jpg" alt="" class="userImg">
+				<span>留言的用户名字</span>
+			</div>
+			<!-- 聊天文本 -->
+			<div class="chatTextBox">
+				<div class="box">
+				    <span class="lastTime">2017-08-07</span><!-- 上次会话结束时间-->
+					<div class="userBox scroll">
+					    <img src="images_gb/1.jpg" alt="" class="userImg">
+						<div class="userText">你轻语呢喃这七年成空心不会痛哈哈哈哈哈哈哈哈哈哈灌灌灌灌灌过过哈哈</div>
+					</div>
+				</div>
+			</div>
+			<div class="enterBox">
+				<div class="toolBox">
+					<img src="./images_gb/emj.png" alt="表情" class="emj" title="表情">
+				</div>
+				<div class="text">
+					<textarea name="" id="sendText"></textarea>
+					<!-- 输入为空的提示框 -->
+	                <div id="hintBox">发送内容不能为空，请重新输入！</div>
+				</div>
+				<div class="btn">
+				    <span>可以用来写广告...</span>
+					<a id="send">发送</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.qqFace.js"></script>
+	<script>
+	$(function(){
+		// // 表情		
+		$('.emj').qqFace({
+			id:'emjBox',
+			assign:'sendText',
+			path:'arclist/'
+		});
+		$('.emj').click(function(){
+			$('.emjBox').show();
+		});
+		// 选择完表情
+		$('#box>li').click(function(){
+			$('.emjBox').hide();
+		})
+
+		// 点击对话列表
+		$('.userList').click(function(){
+			// 当前点击的用户变背景色
+			$(this).css({'background':'#eee'});
+			$(this).siblings('.userList').css({'background':'none'});
+			$(this).children('.userName').css({'color':'#505050'});
+			$(this).siblings('.userList').children('.userName').css({'color':'#fff'});
+			$(this).children('.time').css({'color':'#999'});
+			$(this).siblings('.userList').children('.time').css({'color':'#fff'});
+			
+			// $(this).children('.hint').css({'display':'none'});有新的消息的小圆点
+			
+			// 对话框的用户名字和头像
+			var username = $(this).children('.userName').html();
+			$('#chatUser .userHead>span').html(username);
+			var userimg = $(this).children('img').attr('src');
+			console.log(userimg)
+			$('#chatUser .userHead>img').attr('src',userimg);
+			$('.chatTextBox .box .userBox>img').attr('src',userimg);
+			
+		});
+
+		// 点击发送
+		$('#send').click(function(){
+			var sendText = $('#sendText').val();			
+			if(sendText == ''){
+				$('#hintBox').css('display','block');
+				setTimeout(function(){
+					$('#hintBox').hide();
+				},1000);
+			}else{
+				$('.chatTextBox .box').append('<div class="sendBox scroll"><div class="userText">'+replace_em(sendText)+'</div><img src="images_gb/3.jpg" alt="" class="userImg"></div>');				
+				$('#sendText').val('');
+				// 发送文本的时候滚动到当前位置
+				var scrollTop = $(".chatTextBox .box .scroll:last").offset().top;
+				// scrollTop += 20;
+				$(".chatTextBox .box").animate({scrollTop: scrollTop}, 500);		
+			}
+		});
+		function replace_em(str){
+			str = str.replace(/\</g,'&lt;');
+			str = str.replace(/\>/g,'&gt;');
+			str = str.replace(/\n/g,'<br/>');
+			str = str.replace(/\[em_([0-9]*)\]/g,'<img src="arclist/$1.gif" border="0" />');
+			return str;
+		}
+
+		// 点击关闭聊天框
+		$('#chatUser .close').click(function(){
+			$('#chatBox').hide();
+		});
+
+		// 点击在线客服
+		$('#miniBox').click(function(){
+			$('#chatBox').css('display','block');
+		});
+
+	})
+	</script>
+</body>
+</html>
