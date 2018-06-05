@@ -1,0 +1,1472 @@
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,li, dl, dt, dd, form, a, fieldset, input, th, td,nav,header,article,footer,*{margin:0;padding:0;list-style:none;font-family:"PingFang SC", Tahoma, Helvetica, "PingFang SC", sans-serif;box-sizing: border-box;vertical-align:top;}
+body,html{font-size:1rem;width:100%;color:#434343;font-size:62.5%;}
+a{text-decoration:none;color:#434343;}
+a:hover{text-decoration:none;}
+i{font-style:normal;}
+ul, ol, dl { list-style: none; }
+input{outline:none;background:none;border:none;}
+button{background:none;border:none;outline:none;}
+
+.floatLeft{
+	float:left;
+}
+.floatRight{
+	float:right;
+}
+/*页面的头部*/
+nav{
+	width:100%;
+	background:#fff;
+	border-bottom:1px solid #ddd;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:99;
+}
+nav>a{
+	display:block;
+	position:absolute;
+	top:0.26rem;
+	left:0.3rem;
+	width:0.36rem;
+	height:0.36rem;
+}
+nav>a>img{
+	width:0.36rem;
+	height:0.36rem;
+}
+nav>p{
+	width:100%;
+	font:0.32rem/0.88rem "PingFang SC";
+	text-align:center;
+	font-weight:600;
+}
+nav>span{
+	display:block;
+	position: absolute;
+	top:-0.15rem;
+	right:0.3rem;
+	font:0.66rem/0.88rem "PingFang SC";
+	letter-spacing:0rem;
+}
+.navBox{
+	width:100%;
+	height:0.88rem;
+}
+
+/*首页页面*/
+.indexWrap{
+	background:#f8faf9;
+	padding-bottom:0.6rem;
+}
+#banner{
+	width:100%;
+	height:4.4rem;
+}
+#banner .swiper-container{
+	width:100%;
+	height:100%;
+}
+#banner .swiper-container .swiper-wrapper>img{
+	width:100%;
+}
+#banner .swiper-container .swiper-pagination{
+	height:0.12rem;
+	bottom:0.32rem;
+}
+#banner .swiper-container .swiper-pagination .swiper-pagination-bullet{
+	width:0.12rem;
+	height:0.12rem;
+}
+.indexWrap .oneBox,.indexWrap .twoBox,.indexWrap .threeBox,.indexWrap .fourBox,.indexWrap .fiveBox,.indexWrap .sixBox{
+	width:100%;
+	padding:0.58rem 0.3rem 0.5rem 0.3rem;
+	background:#fff;
+	margin-bottom:0.2rem;
+}
+.indexWrap .title{
+	font-size:0.36rem;
+	text-align:center;
+	font-weight:600;
+	margin-bottom:0.5rem;
+}
+.indexWrap .oneBox .textBox{
+	font:0.3rem/0.54rem "PingFang SC";
+	margin:-0.12rem 0 0.5rem 0;
+}
+.indexWrap .oneBox .box:not(:last-child){
+	margin-bottom:0.36rem;
+}
+.indexWrap .oneBox .box>img{
+	display:inline-block;
+	width:1.2rem;
+	height:1.2rem;
+}
+.indexWrap .oneBox .box>div{
+	display:inline-block;
+	width:79%;
+}
+.indexWrap .oneBox .box:not(:last-child)>div{
+	border-bottom:1px solid #ddd;
+}
+.indexWrap .oneBox .box>div>p{
+	font-size:0.3rem;
+	font-weight:600;
+	margin-bottom:0.21rem;
+}
+.indexWrap .oneBox .box>div>span{
+	display:block;
+	font:0.28rem/0.5rem "PingFang SC";
+	padding-bottom:0.25rem;
+}
+.indexWrap .twoBox .aBox{
+	padding:0 0.31rem;
+	width:6.9rem;
+	margin:0 auto;
+}
+.indexWrap .twoBox .aBox .box{
+	display:block;
+	float:left;
+	width:1.64rem;
+}
+.indexWrap .twoBox .aBox .box>img{
+	width:1.64rem;
+	height:1rem;
+}
+.indexWrap .twoBox .aBox .box>p{
+	font-size:0.3rem;
+	text-align:center;
+	padding:0.28rem 0 0 0;
+}
+.marRight68{
+	margin-right:0.68rem;
+}
+.marBottom46{
+	margin-bottom:0.46rem;
+}
+.indexWrap .threeBox .box{
+	display:block;
+	background:#f2f2f2;
+	border-radius:0.06rem;
+	padding:0.26rem 1rem 0.19rem 0.28rem;
+	position:relative;
+}
+.indexWrap .threeBox .box>p{
+	font:0.3rem/0.54rem "PingFang SC";
+	font-weight:600;
+	margin-bottom:0.07rem;
+}
+.indexWrap .threeBox .box>span{
+	display:block;
+	font:0.26rem/0.48rem "PingFang SC";
+}
+.indexWrap .threeBox .box>i{
+	width:0.5rem;
+	height:0.5rem;
+	border-radius:50%;
+	background-color:#3db381;
+	background-image:url('../images/jian-icon.png');
+	background-size:0.17rem 0.3rem;
+	background-position:center center;
+	background-repeat: no-repeat;
+	position:absolute;	
+	right:0.14rem;
+	top:50%;
+	transform:translateY(-50%);
+}
+.indexWrap .threeBox .box:not(:last-child){
+	margin-bottom:0.28rem;
+}
+.indexWrap .fourBox .swiper-wrapper>a{
+	display:block;
+	width:3.2rem;
+}
+.indexWrap .fourBox .swiper-wrapper>a>div{
+	border:1px solid #808080;
+	border-radius:0.06rem;
+}
+.indexWrap .fourBox .swiper-wrapper>a>div>img{
+	display:block;
+	width:100%;
+	height:100%;
+	border-radius:0.06rem;
+}
+.indexWrap .fourBox .swiper-wrapper>a>p{
+	font-size:0.3rem;
+	text-align:center;
+	padding-top:0.3rem;
+}
+.indexWrap .fiveBox .swiper-wrapper>a{
+	display:block;
+	width:2.7rem;
+}
+.indexWrap .fiveBox .swiper-wrapper>a>img{
+	display:block;
+	width:100%;
+	height:2rem;
+	border-top-left-radius:0.06rem;
+	border-top-right-radius:0.06rem;
+}
+.indexWrap .fiveBox .swiper-wrapper>a>p{
+	font:0.3rem/1.02rem "PingFang SC";
+	text-align:center;
+	border-bottom:1px solid #808080;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+	border-bottom-left-radius:0.06rem;
+	border-bottom-right-radius:0.06rem;
+}
+.indexWrap .sixBox .swiper-wrapper>a{
+	display:block;
+	width:3.3rem;
+	margin-right:0.3rem;
+}
+.indexWrap .sixBox .swiper-wrapper>a>img{
+	display:block;
+	width:3.3rem;
+	height:2rem;
+	border-radius:0.06rem;
+}
+.indexWrap .sixBox .swiper-wrapper>a>p{
+	font-size:0.3rem;
+	font-weight:600;
+	text-align:center;
+	padding:0.4rem 0 0.2rem 0;
+}
+.indexWrap .sixBox .swiper-wrapper>a>span{
+	display:block;
+	width:100%;
+	font-size:0.26rem;
+	text-align:center;
+	color:#808080;
+}
+.indexWrap .fontBottom{
+	margin:0 0.3rem 0.6rem 0.3rem;
+	padding-top:0.3rem;
+}
+.indexWrap .fontBottom .join,.indexWrap .fontBottom .consultant{
+	width:3.3rem;
+	height:1rem;
+	border-radius:0.06rem;
+	font:0.3rem/1rem "PingFang SC";
+	color:#fff;
+	text-align:center;
+}
+.indexWrap .fontBottom .join{
+	background:#3db381;
+}
+.indexWrap .fontBottom .consultant{
+	display:block;
+	background:#f5c51d;
+}
+.indexWrap .font>span{
+	display:block;	
+	width:2.52rem;
+	margin:0 auto;
+	font-size:0.28rem;
+	color:#808080;
+	position:relative;
+}
+.indexWrap .font>span:before{
+	content:'';
+	width:0.6rem;
+	height:1px;
+	background:#ddd;
+	position:absolute;
+	top:0.14rem;
+	left:-0.96rem;
+}
+.indexWrap .font>span:after{
+	content:'';
+	width:0.6rem;
+	height:1px;
+	background:#ddd;
+	position:absolute;
+	top:0.14rem;
+	right:-0.96rem;
+}
+.bgColor{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background:rgba(67,67,67,0.7);
+	z-index:888;
+	display:none;
+}
+#alertBox{
+	position:fixed;
+	top:2.58rem;
+	left:0;
+	right:0;
+	margin:0 auto;
+	width:6.9rem;
+	background:#fff;
+	z-index:999;
+	border-radius:0.06rem;
+}
+#alertBox .wrap{
+	width:100%;
+	padding:0.74rem 0 0.42rem 0;
+	position:relative;	
+	text-align:center;
+}
+#alertBox .wrap .closeAlert{
+	width:0.58rem;
+	height:0.58rem;
+	background:url('../images/jrhy-guanbit-abe.png');
+	background-size:0.58rem 0.58rem;
+	position:absolute;
+	top:0.08rem;
+	right:0.08rem;
+}
+#alertBox .wrap>p{
+	font:0.4rem/0.4rem "PingFang SC";
+	font-weight:600;
+	margin-bottom:0.42rem;
+}
+#alertBox .wrap>span{
+	display:block;
+	font:0.32rem/0.32rem "PingFang SC";
+	margin-bottom:0.42rem;
+}
+#alertBox .wrap .inputBox{
+	width:5.3rem;
+	height:0.8rem;
+	margin:0 auto 0.42rem auto;
+}
+#alertBox .wrap .inputBox>input{
+	display:block;
+	width:3.3rem;
+	font:0.3rem/0.4rem "PingFang SC";
+	padding-left:0.28rem;
+	color:#434343;
+	height:0.8rem;
+	border-left:1px solid #808080;
+	border-top:1px solid #808080;
+	border-bottom:1px solid #808080;
+	border-top-left-radius:0.06rem;
+	border-bottom-left-radius:0.06rem;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	-webkit-appearance: none;
+}
+#alertBox .wrap .inputBox>input::-webkit-input-placeholder{
+	color:#808080;
+}
+#alertBox .wrap .inputBox>button{
+	width:2rem;
+	height:0.8rem;
+	background:#3db381;
+	font:0.28rem/0.8rem "PingFang SC";
+	color:#fff;
+	border-top-right-radius:0.06rem;
+	border-bottom-right-radius:0.06rem;
+}
+#alertBox .wrap .tishi{
+	min-height:0.28rem;
+	font-weight:600;
+}
+.errorColor{
+	color:#d83d3d;
+	font:0.28rem/0.28rem "PingFang SC";
+}
+.succColor{
+	color:#3db381;
+	font:0.3rem/0.3rem "PingFang SC";
+}
+
+
+
+/*基地可选择页面*/
+.jdWrap{
+	width:100%;
+	padding:.6rem 0.3rem 0 0.3rem;
+}
+.jdWrap .fontBox{
+	width:100%;
+	height:0.4rem;
+	margin-bottom:.6rem;
+}
+.jdWrap .fontBox>span{
+	display:inline-block;
+	width:0.4rem;
+	height:0.4rem;
+	border:1px solid #3db381;
+	border-radius:50%;
+	font:0.3rem/0.4rem "PingFang SC";
+	text-align:center;
+	color:#3db381;
+	text-shadow: 0.02rem 0.02rem 0.04rem rgba(61,179,129,0.2);
+	margin:0.05rem 0.2rem 0 0;
+}
+.jdWrap .fontBox>i{
+	width:90%;
+	display:inline-block;
+	min-height:0.54rem;
+	font:0.3rem/0.54rem "PingFang SC";
+}
+
+
+/*攀枝花基地*/
+.imgBox{
+	height:4rem;
+}
+.imgBox .img{
+	display:block;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.imgBox .img>img{
+	width:100%;
+	height:100%;
+}
+.imgBox .img>p{
+	position:absolute;
+	bottom:0.3rem;
+	right:0.3rem;
+	height:0.3rem;
+	font:0.28rem/0.3rem "PingFang SC";
+	font-weight:600;
+	color:#fff;
+	text-align: right;
+	text-shadow:0.02rem 0.02rem 0.02rem rgba(67,67,67,0.3);
+}
+.imgBox .img>p>img{
+	width:0.37rem;
+	height:0.33rem;
+	margin-right:0.12rem;
+}
+.pzhWrap .content{
+	padding:0 0.3rem;
+}
+.pzhWrap .titleBox{
+	padding:0.19rem 0 0.46rem 0;
+}
+.pzhWrap .titleBox>p{
+	font:0.4rem/0.74rem "PingFang SC";
+	font-weight:600;
+}
+.pzhWrap .titleBox .box{
+	height:0.4rem;
+	margin-top:0.21rem;
+}
+.pzhWrap .titleBox .box>span{
+	margin-bottom:0.21rem;
+	font-size:0.3rem;
+	font-weight:600;
+}
+.pzhWrap .titleBox .box>span>i{
+	color:#e1424f;
+}
+.pzhWrap .titleBox .box>span>i>i{
+	font-size:0.4rem;
+	line-height:0.4rem;
+	font-weight:600;
+}
+.pzhWrap .titleBox .box>i{
+	font-size:0.28rem;
+	font-weight:600;
+}
+.fontRight{
+	float:right;
+}
+.borderTop{
+	border-top:1px solid #ddd;
+}
+.pzhWrap .content .listBox1{
+	padding:0.38rem 0 0.26rem 0;
+}
+.pzhWrap .content .listBox1>span{
+	display:block;
+	font-size:0.28rem;
+	color:#3db381;
+	margin-bottom:0.2rem;
+}
+.pzhWrap .content .listBox1>p{
+	min-height:0.52rem;
+	font:0.28rem/0.52rem "PingFang SC";
+	color:#808080;
+}
+.pzhWrap .content .listBox2{
+	padding:0.26rem 0;
+	height:1.6rem;
+}
+.pzhWrap .content .listBox2>i{
+	font-size:0.3rem;
+	color:#808080;
+	padding-top:0.12rem;
+}
+.pzhWrap .content .listBox2>div{
+	width:3rem;
+	text-align: right;
+	font:0.3rem/0.54rem "PingFang SC";
+	color:#434343;
+}
+.pzhWrap .content .listBox{
+	height:1rem;
+	font:0.3rem/1rem "PingFang SC";
+}
+.pzhWrap .content .iconBox{
+	width:6.9rem;	
+	height:2.46rem;
+	padding:0.46rem 0.31rem 0 0.31rem;
+	margin:0 auto;
+}
+.pzhWrap .content .iconBox .box{
+	float:left;
+	width:1.64rem;
+}
+.pzhWrap .content .iconBox .box:not(:nth-last-child(1)){
+	margin-right:0.68rem;
+}
+.pzhWrap .content .iconBox .box>img{
+	width:100%;
+	height:1rem;
+}
+.pzhWrap .content .iconBox .box>p{
+	padding:0.28rem 0 0.4rem 0;
+	font-size:0.3rem;
+	color:#606060;
+	text-align:center;
+}
+.pzhWrap .content .linkBox{
+	display: block;
+	padding:0.38rem 0;
+}
+.pzhWrap .content .linkBox>p{
+	font-size:0.36rem;
+	color:#606060;
+	margin-bottom:0.38rem;
+	height:0.36rem;
+	font-weight:600;
+}
+.pzhWrap .content .linkBox>div{
+	min-height:1.86rem;
+}
+.pzhWrap .content .linkBox>div>img{
+	display:inline-block;
+	width:2.76rem;
+	height:1.86rem;
+}
+.pzhWrap .content .linkBox>div>span{
+	display:inline-block;
+	width:55%;
+}
+.pzhWrap .content .linkBox>div>span>span{
+	display:block;
+	font:0.3rem/0.54rem "PingFang SC";
+	margin-bottom:0.16rem;
+}
+.pzhWrap .content .linkBox>div>span>i{
+	display:block;
+	font:0.28rem/0.52rem "PingFang SC";
+	color:#808080;
+	height:1.04rem;
+	overflow: hidden;
+}
+.pzhWrap .content .infoBox{
+	padding:0.5rem 0;
+}
+.pzhWrap .content .infoBox>p{
+	height:0.36rem;
+	font-size:0.36rem;
+	font-weight:600;
+	color:#606060;
+	margin-bottom:0.38rem;
+}
+.pzhWrap .content .infoBox>div{
+	font:0.3rem/0.54rem "PingFang SC";
+	height:2.7rem;
+	overflow: hidden;
+	margin-bottom:0.38rem;
+}
+.pzhWrap .content .infoBox>div>img{
+	display:block;
+	height:3.7rem;
+	margin:0.5rem 0;
+}
+.pzhWrap .content .infoBox>button{
+	display:block;
+	width:100%;
+	height:0.4rem;
+	font-size:0.3rem;
+	text-align:right;
+	color:#3db381;
+	font-weight:600;
+}
+.pzhWrap .content .locaBox{
+	padding:0.5rem 0 0 0;
+}
+.pzhWrap .content .locaBox>p{
+	height:0.36rem;
+	font-size:0.36rem;
+	font-weight:600;
+	color:#606060;
+	margin-bottom:0.5rem;
+}
+.pzhWrap .content .locaBox>div{
+	width:6.9rem;
+	height:1.68rem;
+	margin:0 auto;
+}
+.pzhWrap .content .locaBox>div .box{
+	width:1.5rem;
+	float:left;	
+}
+.pzhWrap .content .locaBox>div .box:not(:nth-last-child(1)){
+	margin-right:0.3rem;
+}
+.pzhWrap .content .locaBox>div .box>img{
+	width:100%;
+	height:1rem;
+}
+.pzhWrap .content .locaBox>div .box>p{
+	font-size:0.3rem;
+	color:#606060;
+	text-align:center;
+	padding-top:0.28rem;
+}
+.fontBottom{
+	height:0.3rem;
+	padding:0.6rem 0 1rem 0;
+	text-align:center;
+}
+.fontBottom>span{
+	font-size:0.28rem;
+	color:#808080;
+	position:relative;
+}
+.fontBottom>span:before{
+	content:'';
+	width:0.6rem;
+	height:1px;
+	background:#ddd;
+	position:absolute;
+	top:0.18rem;
+	left:-0.96rem;
+}
+.fontBottom>span:after{
+	content:'';
+	width:0.6rem;
+	height:1px;
+	background:#ddd;
+	position:absolute;
+	top:0.18rem;
+	right:-0.96rem;
+}
+.footerBox{
+	height:0.88rem;
+}
+.footer{
+	display:block;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:0.88rem;
+	font:0.3rem/0.88rem "PingFang SC";
+	text-align:center;
+	color:#fff;
+	background:#3db381;
+}
+
+/*图库页面*/
+.mapDepot{
+	width:100%;
+	padding:0.4rem 0.3rem 0 0.3rem;
+}
+.mapDepot .content{
+	width:6.9rem;
+	margin:0 auto;
+}
+.mapDepot .mapBox{
+	display:block;
+	float:left;
+	width:3.3rem;
+	height:3.3rem;
+	border-radius:0.06rem;
+	margin:0 0 0.4rem 0;
+	position:relative;
+}
+.mapDepot .mapBox:nth-child(2n){
+	margin-left:0.3rem;
+}
+.mapDepot .mapBox>img{
+	width:3.3rem;
+	height:3.3rem;
+}
+.mapDepot .mapBox>span{
+	display:block;
+	width:1rem;
+	height:0.5rem;
+	border-radius:0.06rem;
+	background:rgba(67,67,67,0.6);
+	font:0.28rem/0.5rem "PingFang SC";
+	text-align:center;
+	color:#fff;
+	position:absolute;
+	bottom:0.26rem;
+	left:0.16rem;
+}
+
+/*房间详情页面*/
+.fangWrap .content{
+	padding:0 0.3rem;
+}
+.fangWrap .content .title{
+	font-size:0.4rem;
+	font-weight:600;
+	padding:0.46rem 0;
+}
+.fangWrap .content .detailBox{
+	width:100%;
+	min-height:2.9rem;
+}
+.fangWrap .content .detailBox>ul{
+	padding:0.46rem 0;
+	float:left;
+}
+.fangWrap .content .detailBox>ul>li,.fangWrap .content .detailBox>ol>li{
+	font-size:0.3rem;
+}
+.fangWrap .content .detailBox>ul>li:not(:nth-last-child(1)),.fangWrap .content .detailBox>ol>li:not(:nth-last-child(1)){
+	margin-bottom:0.46rem;
+}
+.fangWrap .content .detailBox>ul>li>span,.fangWrap .content .detailBox>ol>li>span{
+	color:#808080;
+	margin-right:0.8rem;
+}
+.fangWrap .content .detailBox>ol{
+	padding:0.46rem 0;
+	float:right;
+}
+.fangWrap .content .iconBox{
+	width:100%;
+	min-height:1.74rem;
+	margin-top:-0.14rem;
+}
+.fangWrap .content .iconBox>div{
+	width:1.38rem;
+	min-height:1rem;
+	float:left;
+}
+.fangWrap .content .iconBox>div>img{
+	width:1.38rem;
+	height:0.88rem;
+}
+.fangWrap .content .iconBox>div>span{
+	width:100%;
+	display:block;
+	font-size:0.28rem;
+	text-align:center;
+	padding-top:0.12rem;
+}
+.fangWrap .content .redFont{
+	display:block;
+	font-size:0.3rem;
+	color:#e1424f;
+	padding-bottom:0.6rem;
+}
+
+/*金卡使用说明*/
+.cardWrap .content{
+	padding:0 0.3rem 0.6rem 0.3rem;
+	background:#f8faf9;
+}
+.cardWrap .content .title{
+	padding:0.3rem 0;
+	min-height:0.46rem;
+	font:0.3rem/0.46rem "PingFang SC";
+	color:#808080;
+	font-weight:600;
+	padding-left:0.18rem;
+}
+.cardWrap .content .title>img{
+	width:0.59rem;
+	height:0.46rem;
+}
+.cardWrap .content .textBox{
+	width:100%;
+	min-height:0.54rem;
+	background:#fff;
+	border-radius:0.06rem;
+	box-shadow: 0 0.02rem 0.06rem rgba(67,67,67,0.2);
+	padding:0.28rem 0.5rem 0.28rem 1.02rem;
+	position:relative;
+	font:0.3rem/0.54rem "PingFang SC";
+}
+.cardWrap .content .textBox:not(:last-child)::after{
+	content:'';
+	width:0.06rem;
+	height:0.28rem;
+	background:#ddd;
+	position:absolute;
+	bottom:-0.28rem;
+	left:0.42rem;
+}
+.cardWrap .content .textBox:not(:last-child){
+	margin-bottom:0.28rem;
+}
+.cardWrap .content .textBox>sup{
+	color:#e1424f;
+	vertical-align:super;
+}
+.cardWrap .content .textBox>span{
+	display:block;
+	width:0.4rem;
+	height:0.4rem;
+	border-radius:50%;
+	font:0.26rem/0.4rem "PingFang SC";
+	text-align:center;
+	position:absolute;
+	top:0.34rem;
+	left:0.26rem;
+}
+.cardWrap .content .otherFont{
+	padding:0.49rem 0.3rem 0 0.3rem;
+}
+.cardWrap .content .otherFont>p{
+	font:0.26rem/0.48rem "PingFang SC";
+	color:#808080;
+}
+.cardWrap .content .otherFont>p:not(:last-child){
+	margin-bottom:0.4rem;
+}
+.cardWrap .content .otherFont>p>sup{
+	color:#e1424f;
+	vertical-align:super;
+	font-size:0.26rem;
+}
+.yellowFont{
+	color:#f5c51d;
+	border:1px solid #f5c51d;
+}
+.greenFont{
+	color:#3db381;
+	border:1px solid #3db381;
+}
+.purpleFont{
+	color:#8c8db9;
+	border:1px solid #8c8db9;
+}
+
+/*会员有保障页面*/
+.huiWrap .content{
+	background:#f8faf9;
+	padding:0.4rem 0.3rem 0.6rem 0.3rem;
+}
+.huiWrap .content .textBox{
+	width:100%;
+	min-height:0.54rem;
+	background:#fff;
+	border-radius:0.06rem;
+	box-shadow: 0 0.02rem 0.06rem rgba(67,67,67,0.2);
+	padding:0.28rem 0.44rem 0.28rem 0.66rem;
+	position:relative;
+	font:0.3rem/0.54rem "PingFang SC";
+}
+.huiWrap .content .textBox>span{
+	color:#3db381;
+}
+.huiWrap .content .textBox:not(:last-child){
+	margin-bottom:0.28rem;
+}
+.huiWrap .content .textBox>i{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:0.6rem;
+	height:0.6rem;
+	background:url('../images/san-icon.png');
+	background-size:0.6rem 0.6rem;
+
+}
+.huiWrap .content .textBox>b{
+	position:absolute;
+	top:-0.08rem;
+	left:0.1rem;
+	color:#fff;
+	font-size:0.26rem;
+	font-weight:normal;
+}
+
+/*产品有优势页面*/
+.chanpinWrap .content{
+	padding:0.5rem 0.3rem 0.6rem 0.3rem;
+}
+.chanpinWrap .content .title{
+	display:block;
+	margin:0 auto 0.48rem auto;
+	font-size:0.34rem;
+	font-weight:600;
+	text-align:center;
+	position:relative;
+}
+.chanpinWrap .content .title:before{
+	content:'';
+	width:0.52rem;
+	height:0.21rem;
+	background:url('../images/chanpin-lefticon@2x.png');
+	background-size:0.52rem 0.21rem;
+	position:absolute;
+	top:0.13rem;
+	left:0.54rem;
+}
+.chanpinWrap .content .title:after{
+	content:'';
+	width:0.52rem;
+	height:0.21rem;
+	background:url('../images/chanpin-righticon@2x.png');
+	background-size:0.52rem 0.21rem;
+	position:absolute;
+	top:0.13rem;
+	right:0.54rem;
+}
+.chanpinWrap .content .textBox1{
+	font:0.3rem/0.54rem "PingFang sc";
+	color:#fff;
+	padding:0.3rem 0.44rem 0.3rem 0.46rem;
+	background:#3db381;
+	border-radius:0.06rem;
+	margin-bottom:0.49rem;
+}
+.chanpinWrap .content .textBox2{
+	padding:0 0.3rem;
+	font:0.26rem/0.48rem "PingFang SC";
+	color:#808080;
+	margin-bottom:0.49rem;
+}
+.chanpinWrap .content .textBox2>sup{
+	font-size:0.2rem;
+	font-weight:600;
+	color:#e1424f;
+	vertical-align:super;
+	margin-right:0.1rem;
+}
+.chanpinWrap .content .chanpinTable{
+	width:6.9rem;
+	border:1px solid #808080;
+	border-radius:0.06rem;
+	margin:0 auto;
+}
+.chanpinWrap .content .chanpinTable th{
+	border:none;
+	font-size:0.28rem;
+	border-bottom:1px solid #808080;
+}
+.chanpinWrap .content .chanpinTable th:not(:last-child){
+	border-right:1px solid #808080;
+}
+.pad59{
+	padding:0.22rem 0.5rem;
+}
+.pad25{
+	padding:0.22rem 0.25rem;
+}
+.chanpinWrap .content .chanpinTable td:not(:last-child){
+	border-right:1px solid #808080;
+}
+.chanpinWrap .content .chanpinTable .firstUl>ul{
+	font:0.26rem/0.48rem "PingFang SC";
+	padding:0.29rem 0.18rem 0.29rem 0.12rem;
+	max-width:2.5rem;
+}
+.chanpinWrap .content .chanpinTable .firstUl>ul>li,.chanpinWrap .content .chanpinTable .thirdUl>ul>li{
+	padding-left:0.22rem;
+	position:relative;
+}
+.chanpinWrap .content .chanpinTable .firstUl>ul>li:before,.chanpinWrap .content .chanpinTable .secUl>ul>li:before{
+	content:'';
+	width:0.08rem;
+	height:0.08rem;
+	background:#f5c51d;
+	border-radius:0.02rem;
+	position:absolute;
+	top:0.2rem;
+	left:0;
+}
+.chanpinWrap .content .chanpinTable .firstUl>ul>li:not(:last-child),.chanpinWrap .content .chanpinTable .thirdUl>ul>li:not(:last-child){
+	margin-bottom:0.18rem;
+}
+.chanpinWrap .content .chanpinTable .secUl>ul{
+	font:0.26rem/0.48rem "PingFang SC";
+	padding:2.29rem 0 0.29rem 0.12rem;
+	max-width:2.28rem;
+}
+.chanpinWrap .content .chanpinTable .secUl>ul>li{
+	padding-left:0.16rem;
+	position:relative;
+}
+.chanpinWrap .content .chanpinTable .secUl>ul>li:not(:last-child){
+	margin-bottom:0.48rem;
+}
+.chanpinWrap .content .chanpinTable td{
+	max-width:2.3rem;
+}
+.chanpinWrap .content .chanpinTable .thirdUl>ul{
+	font:0.26rem/0.48rem "PingFang SC";
+	padding:0.29rem 0.18rem 0.29rem 0.12rem;
+	max-width:2.3rem;
+}
+.chanpinWrap .content .chanpinTable .thirdUl>ul>li:before{
+	content:'';
+	width:0.08rem;
+	height:0.08rem;
+	background:#3db381;
+	border-radius:0.02rem;
+	position:absolute;
+	top:0.2rem;
+	left:0;
+}
+
+/*共享更经济页面*/
+.gongWrap .content{
+	width:100%;
+	padding:0.66rem 0.3rem 0.6rem 0.3rem;
+}
+.gongWrap .content .fontBox{
+	font-size:0.3rem;
+	color:#fff;
+	padding:0.3rem 0.44rem;
+	background:#3db381;
+	border-radius:0.06rem;
+	position:relative;	
+	margin-bottom:0.66rem;
+}
+.gongWrap .content .fontBox>b{
+	font-size:0.6rem;
+	color:#3db381;
+	position:absolute;
+	left:0;
+	top:-0.55rem;
+}
+.gongWrap .content .title{
+	font-size:0.36rem;
+	font-weight:600;
+	border-left:0.08rem solid #3db381;
+	padding-left:0.36rem;
+}
+.gongWrap .content .textBox{
+	font:0.3rem/0.54rem "PingFang SC";
+	margin:0.38rem 0 0.22rem 0;
+}
+.gongWrap .content .textBox1{
+	font:0.3rem/0.54rem "PingFang SC";
+	color:#808080;
+	margin-bottom:0.48rem;
+}
+.gongWrap .content .gongTable{
+	width:6.9rem;
+	border:1px solid #808080;
+	border-radius:0.06rem;
+	margin:0 auto 0.66rem auto;
+}
+.gongWrap .content .gongTable th{
+	width:2.28rem;
+	font-size:0.28rem;
+	padding:0.22rem 0;
+	text-align:center;
+	border:none;
+	border-bottom:1px solid #808080;
+}
+.gongWrap .content .gongTable th:not(:last-child){
+	border-right:1px solid #808080;
+}
+.gongWrap .content .gongTable tr td{
+	font:0.26rem/0.48rem "PingFang SC";
+	padding:0.29rem 0.16rem 0.29rem 0.2rem;
+}
+.gongWrap .content .gongTable tr:nth-child(2) td:not(:last-child){
+	border-right:1px solid #808080;
+}
+.gongWrap .content .gongTable tr:nth-child(2) td{
+	border-bottom:1px solid #808080;
+}
+.gongWrap .content .title1{
+	font-size:0.3rem;
+	font-weight:600;
+	text-align:right;
+	padding-right:1.54rem;
+	margin-bottom:0.46rem;
+}
+.gongWrap .content .box{
+	width:100%;
+	padding:0 0.26rem;
+	min-height:2.14rem;
+}
+.clear{clear:both;}
+.gongWrap .content .box:not(:last-child){
+	margin-bottom:0.36rem;
+}
+.gongWrap .content .box .leftBox{
+	width:2.42rem;
+	padding:0.1rem 0 0.2rem 0;
+}
+.gongWrap .content .box .leftBox>img{
+	display:block;
+	width:0.3rem;
+	height:0.78rem;
+	margin:0 auto 0.34rem auto;
+}
+.gongWrap .content .box .leftBox>span{
+	display:block;
+	font-size:0.26rem;
+	margin:0 auto 0.22rem auto;
+	text-align:center;
+	position:relative;
+}
+.gongWrap .content .box .leftBox>span:after{
+	content:'';
+	width:1.62rem;
+	height:0.14rem;
+	background:#e7e7e7;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:0  auto;
+	z-index:-1;
+}
+.gongWrap .content .box .leftBox>i{
+	display:block;
+	width:0.88rem;
+	height:0.14rem;
+	background:#e7e7e7;
+	margin:0.04rem auto 0.1rem auto;
+}
+.gongWrap .content .box .leftBox>b{
+	display:block;
+	width:0.62rem;
+	height:0.08rem;
+	background:#e7e7e7;
+	margin:0 auto;
+}
+.gongWrap .content .box .leftBox>p{
+	font-size:0.26rem;
+	color:#e1424f;
+	text-align:center;
+}
+.gongWrap .content .box .rightBox{
+	width:3.96rem;
+	background:#3db381;
+	color:#fff;
+	padding:0.12rem 0 0.12rem 0.46rem;
+	border-radius:0.06rem;
+	font:0.26rem/0.5rem "PingFang SC";
+}
+
+/*服务更贴心页面*/
+.fuwuWrap .content{
+	padding:0.64rem 0.3rem 0 0.3rem;
+}
+.fuwuWrap .content .wrap{
+	width:100%;
+	margin-bottom:0.6rem;
+}
+.fuwuWrap .content .wrap .leftBox{
+	width:3.22rem;
+	height:2.12rem;
+	background:#3db381;
+	font:0.3rem/0.54rem "PingFang SC";
+	color:#fff;
+	padding:0.52rem 0.6rem;
+	border-radius:0.06rem;
+	margin-right:0.36rem;
+}
+.fuwuWrap .content .wrap .rightBox{
+	width:3.22rem;
+	height:2.12rem;
+	background:#3db381;
+	font:0.3rem/0.54rem "PingFang SC";
+	color:#fff;
+	padding:0.25rem 0.3rem 0.25rem 0.38rem;
+	border-radius:0.06rem;
+}
+.fuwuWrap .content .iconBox{
+	width:6.9rem;
+	padding:0 0.2rem;
+	margin:0 auto 0.06rem auto;
+}
+.fuwuWrap .content .iconBox .box{
+	width:1rem;
+	float:left;
+	margin-bottom:0.6rem;
+}
+.fuwuWrap .content .iconBox .box>img{
+	display:block;
+	width:1rem;
+	height:1rem;
+	margin-bottom:0.24rem;
+}
+.fuwuWrap .content .iconBox .box>span{
+	font-size:0.24rem;
+	display:block;
+}
+.maLeft83{
+	margin-right:0.83rem;
+}
+.maRight83{
+	margin-left:0.83rem;
+}
+.fuwuWrap .content .title{
+	font-size:0.36rem;
+	font-weight:600;
+	border-left:0.08rem solid #3db381;
+	padding-left:0.36rem;
+}
+.fuwuWrap .content .textBox{
+	font:0.3rem/0.54rem "PingFang SC";
+	margin:0.38rem 0 0.22rem 0;
+}
+
+/*品牌有保障页面*/
+.pinpaiWrap .content{
+	width:7.5rem;
+	margin:0 auto;
+ 	background:#f8faf9;
+ }
+.pinpaiWrap .content .textBox1{
+ 	padding:0.46rem 0.3rem;
+ 	font:0.3rem/0.54rem "PingFang SC";
+ 	background:#fff;
+ 	margin-bottom:0.2rem;
+ }
+.pinpaiWrap .content .title{
+	font-size:0.4rem;
+	text-align:center;
+	font-weight:600;
+	margin-bottom:0.58rem;
+}
+.pinpaiWrap .content .oneBox,.pinpaiWrap .content .twoBox,.pinpaiWrap .content .threeBox,.pinpaiWrap .content .fourBox{
+	width:100%;
+	padding:0.58rem 0.3rem 0.46rem 0.3rem;
+	background:#fff;
+	margin-bottom:0.2rem;
+}
+.pinpaiWrap .twoBox{
+	padding-bottom:0!important;
+}
+.pinpaiWrap .content .oneBox>img{
+	display:block;
+	margin:0.46rem auto;
+}
+.pinpaiWrap .content .oneBox .fontBox{
+	font:0.3rem/0.54rem "PingFang SC";
+}
+.pinpaiWrap .content .oneBox>span{
+	display:block;
+	width:100%;
+	font-size:0.3rem;
+	color:#808080;
+	text-align:center;
+	margin-bottom:0.46rem;
+}
+.pinpaiWrap .content .oneBox .smallTitle{
+	font-size:0.3rem;
+	font-weight:600;
+	padding:0.46rem 0 0.12rem 0;
+}
+.pinpaiWrap .twoBox .peopleBox{
+	padding:0.1rem 0 0.32rem 0;
+}
+.pinpaiWrap .twoBox .peopleBox:not(:last-child){
+	margin-bottom:0.48rem;
+	border-bottom:1px solid #ddd;
+}
+.pinpaiWrap .twoBox .peopleBox .top{
+	margin-bottom:0.46rem;
+}
+.peopleBox .top>img{
+	display:block;
+	width:2.2rem;
+	height:2.2rem;
+	margin-right:0.58rem;
+}
+.peopleBox .top>p{
+	width:4.12rem;
+	min-height:0.4rem;
+}
+.peopleBox .top>p>span{
+	display:block;
+	font:0.4rem/0.4rem "PingFang SC";
+	font-weight:600;
+	margin-bottom:0.24rem;
+	position:relative;
+	z-index:10;
+}
+.peopleBox .top>p>span:after{
+	content:'';
+	width:0.84rem;
+	height:0.12rem;
+	background:#e7e7e7;
+	position:absolute;
+	bottom:0;
+	left:0;
+	z-index:-1;
+}
+.peopleBox .top>p>i{
+	display:block;
+	font-size:0.36rem;
+	font-weight:600;
+	margin-bottom:0.16rem;
+}
+.peopleBox .top>p>b{
+	display:block;
+	font:0.3rem/0.5rem "PingFang SC";
+}
+.peopleBox .bottom>div>i{
+	display:block;
+	font:0.3rem/0.54rem "PingFang SC";
+	font-weight:600;
+}
+.peopleBox .bottom>div>span{	
+	width:5rem;	
+}
+.peopleBox .bottom>div>span>span{
+	display:block;
+	font:0.3rem/0.54rem "PingFang";
+	margin-bottom:0.14rem;
+}
+.pinpaiWrap .content .smallTitle3{
+	font-size:0.4rem;
+	font-weight:600;
+	color:#3db381;
+	margin-bottom:0.08rem;
+}
+.times:not(:last-child){
+	margin-bottom:0.08rem;
+}
+.times{
+	width:100%;
+}
+.times ul {
+	width:6.48rem;
+	margin-left:0.42rem;
+	border-left:1px solid #ddd;
+	padding:0.48rem 0 0.38rem 0;
+}
+.times ul li {
+	width:100%;
+	line-height:100%;
+	position:relative;
+	padding-left:0.12rem;
+}
+.times ul li:not(:last-child){
+	margin-bottom:0.18rem;
+}
+.times ul li:before{
+	content:'';
+	width:0.2rem;
+	height:0.2rem;
+	background:#ddd;
+	border:0.08rem solid #fff;
+	border-radius:50%;
+	position:absolute;
+	left:-0.18rem;
+	top:50%;
+	transform:translateY(-50%);
+}
+.times ul li span {
+	display:block;
+	font-size:0.28rem;
+	margin:0 0.3rem 0 0.12rem;
+}
+.times ul li i{
+	display:block;
+	width:5.3rem;
+	padding:0.17rem 0.28rem 0.15rem 0.24rem;
+	font:0.28rem/0.5rem "PingFang SC";
+	background:#f2f2f2;
+	border-radius:0.06rem;
+	position:relative;
+}
+.times ul li i:before{
+	content:'';
+	width:0;
+    height:0;
+    border-top:0.16rem solid transparent;
+    border-right:0.16rem solid #f2f2f2;
+    border-bottom:0.16rem solid transparent;
+    position:absolute;
+    top:50%;
+	transform:translateY(-50%);
+    left:-0.14rem;
+}
+.padBottom18{
+	padding-bottom:0.18rem!important;
+}
+.pinpaiWrap .fourBox{
+	padding-bottom:0.48rem!important;
+	margin-bottom:0!important;
+}
+.pinpaiWrap .fourBox .textBox{
+	font:0.3rem/0.54rem "PingFang SC";
+	margin:-0.12rem 0 0.6rem 0;
+}
+.pinpaiWrap .fourBox .iconBox{
+	padding:0 0.22rem;
+	width:100%;
+	margin:0 auto 0.33rem auto;
+}
+.pinpaiWrap .fourBox .iconBox .icon{
+	width:33%;
+	margin-bottom:0.6rem;
+}
+.pinpaiWrap .fourBox .iconBox .icon1{
+	width:45%;
+}
+.pinpaiWrap .fourBox .iconBox .icon>img,.pinpaiWrap .fourBox .iconBox .icon1>img{
+	display:block;
+	margin:0 auto;
+	width:1rem;
+	height:1rem;
+	margin-bottom:0.13rem;
+}
+.pinpaiWrap .fourBox .iconBox .icon>p,.pinpaiWrap .fourBox .iconBox .icon1>p{
+	font:0.28rem/0.5rem "PingFang SC";
+	text-align:center;
+}
+.pinpaiWrap .fourBox .smallTitle2{
+	font-size:0.3rem;
+	font-weight:600;
+	padding-left:0.3rem;
+	border-left:0.06rem solid #3db381;
+	margin-bottom:0.58rem;
+}
+.pinpaiWrap .fourBox .linkBox{
+	margin:-0.26rem 0 0.58rem 0;
+}
+.pinpaiWrap .fourBox .linkItem{
+	display:block;
+	position:relative;
+	font-size:0.3rem;
+	padding:0.26rem 0;
+	border-bottom:1px solid #ddd;
+}
+.pinpaiWrap .fourBox .linkItem>p{
+	margin-bottom:0.22rem;
+}
+.pinpaiWrap .fourBox .linkItem>span{
+	color:#808080;
+}
+.pinpaiWrap .fourBox .linkItem>i{
+	width:0.17rem;
+	height:0.3rem;
+	background:url("../images/greensan-icon.png");
+	background-size:0.17rem 0.3rem;
+	position:absolute;
+	right:0;	
+	top:50%;
+	transform:translateY(-50%);
+}
+.pinpaiWrap .fourBox .itemBox{
+	margin-top:-0.12rem;
+}
+.pinpaiWrap .fourBox .itemBox>li{
+	font:0.3rem/0.54rem "PingFang SC";
+}
+
