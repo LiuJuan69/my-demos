@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<style>
+	*{margin:0;padding:0;list-style:none;font-family:microsoft yahei, Tahoma, Helvetica, arial, sans-serif;}
+	body,html{width:100%;font-size:1rem;background:#c9e6d7;}
+	ul, ol, dl { list-style: none; }
+	input{	outline:none;background:none;border:none;}
+	button{background:none;border:none;outline:none;}
+	</style>
+	<title>确认框</title>
+</head>
+<body>
+
+	<button onclick="test_()">点击测试一下</button>
+
+
+	<script src="./js/zepto.min.js"></script>
+	<script>
+	window.confirm = function(txt,callbackOk,callbackCencel){
+		var confirmWrap = document.createElement("div");
+		confirmWrap.id="confirmWrap";
+		confirmWrap.style.position = "fixed";
+		confirmWrap.style.left = "10%";
+		confirmWrap.style.top = "30%";
+		confirmWrap.style.width = "5.4rem";
+		confirmWrap.style.height = "auto";
+		confirmWrap.style.padding = "0 .2rem .3rem .2rem";
+		confirmWrap.style.background = "#fff";
+		confirmWrap.style.textAlign = "center";
+		confirmWrap.style.borderRadius = ".2rem";
+		confirmWrap.style.zIndex = "99";
+	    strHtml = "<div class=\"conHtml\" style=\"width:100%; height:auto; padding-top:.6rem; font-size:.42rem;line-height:.6rem;font-family:\'黑体\'; color:#15b4a7; margin-bottom:.45rem; text-align:center;\">"+txt+"</div>\n";
+	    strHtml += "<div class=\"btnWrap\" style=\"width:100%; height:1rem;\"><button class=\"btnYes\" onclick=\"doYes()\" style=\"display:block; float:left; width:45%; height:.7rem; background:#15b4a7; border:.02rem solid #15b4a7; font-size:.38rem;line-height:.7rem;font-family:\'黑体\'; color:#fff; text-align:center; border-radius:.5rem; margin-top:.15rem;\">确定</button><button class=\"btnNo\" onclick=\"doNo()\" style=\"display:block; float:right; width:45%; height:.7rem; background:#fff; border:.02rem solid #999; font-size:.38rem;line-height:.7rem;font-family:\'黑体\'; color:#999; text-align:center; border-radius:.5rem; margin-top:.15rem;\">取消</button></div>\n";
+	    confirmWrap.innerHTML = strHtml;
+	    document.body.appendChild(confirmWrap);
+	    this.doNo = function(){
+	　　　　document.body.removeChild(confirmWrap);
+			if(typeof(callbackCencel) == "function"){
+				callbackCencel();
+				return false;
+			}
+			
+	    }
+	    this.doYes = function(){
+	    	document.body.removeChild(confirmWrap);
+	    	if(typeof(callbackOk) == "function"){
+	    		callbackOk();
+				return true;
+	    	}
+	    	
+		}
+	}
+	// confirm('确定？',function(){
+	// 	console.log('确定按钮');
+	// },function(){
+	// 	console.log('取消按钮')
+	// })
+	function test_(){
+		confirm('确定删除？',function(){
+			alert('你选择的是确定');
+		},function(){
+			alert('你选择的是取消');
+		});
+	}
+	
+	</script>
+</body>
+</html>

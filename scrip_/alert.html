@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<title>弹窗</title>
+</head>
+<body style="background:#c9e6d7;">
+
+	<script src="./js/zepto.min.js"></script>
+	<script>
+	window.alert = function(txt){
+	    var alertWrap = document.createElement("div");
+		alertWrap.id="alertWrap";
+		alertWrap.style.position = "fixed";
+		alertWrap.style.left = "12%";
+		alertWrap.style.top = "30%";
+		alertWrap.style.width = "5.4rem";
+		alertWrap.style.height = "auto";
+		alertWrap.style.padding = "0 .2rem .3rem .2rem";
+		alertWrap.style.background = "#fff";
+		alertWrap.style.textAlign = "center";
+		alertWrap.style.borderRadius = ".2rem";
+		alertWrap.style.zIndex = "99";
+	    strHtml = "<div class=\"alertHtml\" style=\"width:100%; height:auto; padding-top:.6rem; font-size:.42rem;line-height:.6rem;font-family:\'黑体\'; color:#15b4a7; margin-bottom:.45rem; text-align:center;\">"+txt+"</div>\n";
+	    strHtml += " <button class=\"yes\" onclick=\"doOk()\" style=\"display:block; border:none; background:#15b4a7; width:2.5rem; height:.7rem;font-size:.38rem;line-height:.7rem;font-family:\'黑体\'; color:#fff; border-radius:.5rem; margin:0 auto;\">确 定</button>\n";
+	    alertWrap.innerHTML = strHtml;
+	    document.body.appendChild(alertWrap);
+	    this.doOk = function(){
+	　　　　 document.body.removeChild(alertWrap);
+	    }
+	   alertWrap.focus();
+	    document.body.onselectstart = function(){return false;};
+	}
+	
+	alert('创建成功!创建成功!创建成功!创建成功!');
+	
+	</script>
+</body>
+</html>

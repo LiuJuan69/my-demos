@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<style>
+	*{margin:0;padding:0;list-style:none;font-family:microsoft yahei, Tahoma, Helvetica, arial, sans-serif;}
+	body,html{width:100%;background:#c9e6d7;font-size:1rem;}
+	ul, ol, dl { list-style: none; }
+	button{background:none;border:none;}
+	#alertWrap{
+		width:5.4rem;
+		padding:0 .2rem .3rem .2rem;
+		border-radius:.2rem;
+		background:#fff;
+		position:fixed;
+		top:30%;
+		left:50%;
+		margin:0 0 0 -2.9rem;
+	}
+	#alertWrap .alertHtml{
+		width:100%;
+		height:auto;
+		padding-top:.6rem;
+		font:.42rem/.6rem '黑体';
+		color:#15b4a7;
+		margin-bottom:.45rem;
+		text-align:center;
+	}
+	#alertWrap .yes{
+		display:block;
+		border:none;
+		background:#15b4a7;
+		width:2.5rem;
+		height:.7rem;
+		font:.38rem/.7rem '黑体';
+		color:#fff;
+		border-radius:.5rem;
+		margin:0 auto;
+	}
+	</style>
+	<title>弹窗</title>
+</head>
+<body>
+	<div id="alertWrap">
+		<div class="alertHtml">创建成功</div>
+		<button class="yes">确 定</button>
+	</div>
+	<script src="./js/zepto.min.js"></script>
+	<script>
+	$('#alertWrap .yes').on('tap',function(){
+		$('#alertWrap').css('display','none');
+	})
+	</script>
+</body>
+</html>

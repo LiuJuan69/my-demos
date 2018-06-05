@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<style>
+	*{margin:0;padding:0;list-style:none;font-family:microsoft yahei, Tahoma, Helvetica, arial, sans-serif;}
+	body,html{width:100%;font-size:1rem;}
+	input{outline:none;background:none;border:none;}
+	.inputTitle{
+		display:block;
+		width:4rem;
+		height:.5rem;
+		background:pink;
+		color:#000;
+		margin:3rem auto;
+	}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="标题" class="inputTitle" id="htitle11">
+	<script src="js/zepto.min.js"></script>
+	<script>
+	function limit(){
+	    var txtNote;//文本框
+	    // var txtLimit;//提示字数的input
+	    var limitCount;//限制的字数
+	    var txtlength;//到达限制时，字符串的长度
+	    var txtByte;
+	    this.init=function(){
+	        txtNote=this.txtNote;
+	        limitCount=this.limitCount;
+	        txtNote.oninput=function(){wordsLimit()};
+	    }
+	    function wordsLimit(){
+	        var noteCount=0;
+	        noteCount=txtNote.value.replace(/[^\x00-\xff]/g,"xx").length;
+	        if(noteCount>limitCount){
+	            txtNote.value=txtNote.value.substring(0,txtlength+Math.floor((limitCount-txtByte)/2));
+	            txtByte=txtNote.value.replace(/[^\x00-\xff]/g,"xx").length;
+	        }
+	        txtlength=txtNote.value.length;//记录每次输入后的长度
+	        txtByte=txtNote.value.replace(/[^\x00-\xff]/g,"xx").length;
+	    }
+	}
+	var lim=new limit();
+	lim.txtNote=document.getElementById("htitle11");
+	lim.limitCount=20;
+	lim.init();
+	</script>
+</body>
+</html>

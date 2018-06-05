@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+	<title>手机改绑</title>
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<div id="registerHeadBar">
+		<div class="headImg">
+			<img src="" alt="">
+		</div>
+	</div>
+
+	<!-- 页面主体部分 -->
+	<form action="" id="bindPhoneBox">
+		<div class="originalPhone">
+			<input type="text" placeholder="原手机号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11" name="num">
+		</div>
+		<div class="phone">
+			<input type="text" placeholder="请输入新手机号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11" name="num">
+		</div>
+		<div class="code">
+			<input type="text" placeholder="验证码">
+			<button>发送验证码</button>
+		</div>
+		<div class="btn">立即绑定</div>			
+	</form>
+
+	<!-- 错误提示框 -->
+	<div id="alertDialog">
+		<img src="./images/alertIcon.png" alt="">
+		<span>手机号码已存在，请重新输入！</span>
+	</div>
+
+	
+
+	<script src="js/zepto.min.js"></script>
+</body>
+</html>

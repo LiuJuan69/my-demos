@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+	<title>初始注册页面</title>
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<div id="registerHeadBar">
+		<div class="headImg">
+			<img src="" alt="">
+		</div>
+	</div>
+
+	<!-- 页面主体部分 -->
+	<div id="loginBox">
+		<div class="phone">
+			<input type="text" placeholder="请输入手机号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="11" name="num">
+		</div>
+		<div class="code">
+			<input type="text" placeholder="验证码">
+			<button>发送验证码</button>
+		</div>
+		<div class="btn">立即注册</div>
+
+		<!-- 错误提示框 -->
+		<div id="alertDialog">
+			<img src="./images/alertIcon.png" alt="">
+			<span>验证码输入错误,请重新输入！</span>
+		</div>
+	</div>
+
+	
+
+	<script src="js/zepto.min.js"></script>
+</body>
+</html>

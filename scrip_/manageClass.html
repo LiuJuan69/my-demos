@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>班级管理页面</title>
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<div id="classWorkHeadBar">
+		<div class="classWorkHead">
+			<a href="" class="return"><</a>
+			<div class="title">班级管理</div>
+		</div>				
+	</div>
+	<div class="classWorkHeadBar"></div>
+
+	<!-- 班级信息 -->
+	<div id="manageClassCont">
+		<div class="title">中心学校X年级X班</div>
+		<textarea class="classDetail" placeholder="班级描述"></textarea>
+		<div class="btnWrap">
+			<button class="save">保存</button>
+			<button class="leave">离开班级</button>
+		</div>
+	</div>
+
+	<ul id="manageFooter">
+		<li class="show"><a href="">班级信息</a></li>
+		<li><a href="">班级用户</a></li>
+	</ul>
+
+
+	<script src="js/zepto.min.js"></script>
+</body>
+</html>

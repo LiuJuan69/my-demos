@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet" type="text/css">
+
+	<title>作业详情页面</title>
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<div id="classWorkHeadBar">
+		<div class="classWorkHead">
+			<a href="" class="return"><</a>
+			<div class="title">中心学校X年级X班</div>
+			<div class="share">分享</div>
+			<div class="dateWrap">
+				<div class="prevDay">前一天</div>
+				<input id="date" type="text" name="" value="2017-05-21" readonly="readonly">
+				<div class="nextDay">后一天</div>
+			</div>
+		</div>				
+	</div>
+	<div class="classWorkHeadBar"></div>
+
+	<!-- 作业详情 -->
+	<div id="workDetailCont">
+		<div class="title">语文作业</div>
+		<textarea class="workDetail" placeholder="具体作业"></textarea>
+		<div class="accessoryList">
+			<p>附件</p>
+			<div class="accessory">
+				<div class="number">1</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">2</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">3</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 弹出的图片 -->
+	<div id="alertImg">		
+		<img src="./images/120.jpg" alt="" id="img">
+	</div>
+
+
+	<script src="js/zepto.min.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+	<script src="js/date.js"></script>
+	<script>
+		$(function () {
+			$('#workDetailCont .accessoryList .accessory .wrap>button').on('tap',function(){
+				$('#alertImg').show();
+				$('#img').css({"transform":"scale(1)","top":0,"left":0,"bottom":0,"right":0,"margin":"auto"})
+			});
+			$('#alertImg').on('tap',function(){
+				$('#alertImg').hide();
+			})
+			// 手势缩放图片
+			$('#img').on("touchstart", function(e) {
+				if(e.originalEvent.targetTouches.length == 1){
+					touch = e.originalEvent.targetTouches[0];
+					x = touch.pageX;
+					y = touch.pageY;
+				}				
+				 touch1 = e.originalEvent.targetTouches[0];
+				 touch2 = e.originalEvent.targetTouches[1];
+  				 touch1Coord = Math.round(touch1.pageX);
+  				 touch2Coord = Math.round(touch2.pageX); 								
+			})
+
+			$('#img').on("touchmove", function(e) {	
+				event.preventDefault(); //阻止滚动
+				if(e.originalEvent.targetTouches.length == 1){
+					if(imgScale>1){
+						touch = e.originalEvent.targetTouches[0]
+						var touchX = touch.pageX - x,touchY = touch.pageY - y;
+						var imgleft = $(this).offset().left;
+						var imgtop = $(this).offset().top;
+						var imgbottom = $(this).offset().bottom;
+						var imgright = $(this).offset().right;
+						$(this).css({
+							"left":touchX,
+							"top":touchY,
+							"right":"-"+touchX,
+							"bottom":"-"+touchY
+						})
+						if(imgleft>=50){
+							$(this).css({
+								"left":0,
+								"top":touchY,
+								"right":"-"+touchX,
+								"bottom":"-"+touchY
+							})
+						}else if(imgtop>=50){
+							$(this).css({
+								"left":touchX,
+								"top":0,
+								"right":"-"+touchX,
+								"bottom":"-"+touchY
+							})
+						}else if(imgbottom>=50){
+							$(this).css({
+								"left":touchX,
+								"top":touchY,
+								"right":"-"+touchX,
+								"bottom":0
+
+							})
+						}else if(imgright>=50){
+							$(this).css({
+								"left":touchX,
+								"top":touchY,
+								"right":0,
+								"bottom":"-"+touchY
+							})
+							
+						}
+					}
+
+				}				
+				 touch1 = e.originalEvent.targetTouches[0]; //获取第三个触摸点
+				 touch2 = e.originalEvent.targetTouches[1];//获取第四个触摸点
+  				 touch3Coord = Math.round(touch1.pageX);//获取第三个触摸点x坐标
+  				 touch4Coord = Math.round(touch2.pageX);//获取第四个触摸点x坐标
+  				 imgScale = Math.round(touch4Coord-touch3Coord) / Math.round(touch2Coord-touch1Coord); //计算图片缩放比 
+  				if(imgScale<=0.4){
+  					$(this).css({"transform":"scale(1)"});
+  				}else{ 					
+					$(this).css({"transform":"scale("+imgScale+")"});					
+  				}	
+  								
+			})
+			
+			$('#img').on("doubleTap", function(e) {
+				$('#img').css({"transform":"scale(1)","top":0,"left":0,"bottom":0,"right":0,"margin":"auto"})
+			})
+			
+		})
+
+
+     
+	</script>
+</body>
+</html>

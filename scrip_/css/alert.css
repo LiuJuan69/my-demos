@@ -1,0 +1,69 @@
+*{margin:0;padding:0;list-style:none;font-family:microsoft yahei, Tahoma, Helvetica, arial, sans-serif;}
+body,html{width:100%;font-size:1rem;}
+ul, ol, dl { list-style: none; }
+input{	outline:none;background:none;border:none;}
+button{background:none;border:none;outline:none;}
+
+#alertWrap{
+	width:5.4rem;
+	padding:0 .2rem .3rem .2rem;
+	border-radius:.2rem;
+	background:#fff;
+	position:fixed;
+	top:30%;
+	left:50%;
+	margin:0 0 0 -2.9rem;
+}
+#alertWrap .alertHtml{
+	width:100%;
+	height:auto;
+	padding-top:.6rem;
+	font:.42rem/.6rem '黑体';
+	color:#15b4a7;
+	margin-bottom:.45rem;
+	text-align:center;
+}
+#alertWrap .yes{
+	display:block;
+	border:none;
+	background:#15b4a7;
+	width:2.5rem;
+	height:.7rem;
+	font:.38rem/.7rem '黑体';
+	color:#fff;
+	border-radius:.5rem;
+	margin:0 auto;
+}
+
+#confirmWrap{
+	width:5.4rem; padding:0 .2rem .3rem .2rem; border-radius:.2rem; background:#fff; position:fixed; top:30%; left:50%; margin:0 0 0 -2.9rem; }
+#confirmWrap .conHtml{
+	width:100%; height:auto; padding-top:.6rem; font:.42rem/.6rem '黑体'; color:#15b4a7; margin-bottom:.45rem; text-align:center; }
+#confirmWrap .btnWrap{
+	width:100%;
+	height:1rem;
+}
+#confirmWrap .btnWrap .btnYes{
+	display:block; float:left; width:45%; height:.7rem; background:#15b4a7; border:.02rem solid #15b4a7; font:.38rem/.7rem '黑体'; color:#fff; text-align:center; border-radius:.5rem; margin-top:.15rem; }
+#confirmWrap .btnWrap .btnNo{
+	display:block; text-decoration: none; float:right; width:45%; height:.7rem; background:#fff; border:.02rem solid #999; font:.38rem/.7rem '黑体'; color:#999; text-align:center; border-radius:.5rem; margin-top:.15rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

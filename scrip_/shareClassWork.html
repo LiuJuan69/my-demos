@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<script>
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="css/mobiscroll.custom-2.17.0.min.css" rel="stylesheet" type="text/css">
+
+	<title>分享班级作业</title>
+</head>
+<body>
+	<!-- 页面顶部 -->
+	<div id="classWorkHeadBar">
+		<div class="classWorkHead">
+			<a href="" class="return"><</a>
+			<div class="title">中心学校X年级X班</div>
+			<div class="share">分享</div>
+			<div class="dateWrap">
+				<div class="prevDay">前一天</div>
+				<input id="date" type="text" name="" value="2017-05-21" readonly="readonly">
+				<div class="nextDay">后一天</div>
+			</div>
+		</div>				
+	</div>
+	<div class="classWorkHeadBar"></div>
+
+	<!-- 具体作业 -->
+	<div id="shareClassWorkCont">
+		<textarea class="workDetail" placeholder="具体作业"></textarea>
+		<div class="accessoryList">
+			<p>附件</p>
+			<div class="accessory">
+				<div class="number">1</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">2</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">3</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">4</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">5</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+			<div class="accessory">
+				<div class="number">6</div>
+				<div class="wrap">
+					<span>附件名</span>
+					<button>预览</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="shareBox">
+			<div class="wrap">
+				<span>加入班级了解更多作业信息</span>
+				<button>加入班级</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 弹出的图片 -->
+	<div id="alertImg">
+		<div class="wrap">
+			<div class="imgs">
+				<img src="images/eg.jpg" alt="">
+			</div>
+			<div class="close">x</div>
+		</div>		
+	</div>
+
+
+	<script src="js/zepto.min.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+	<script src="js/date.js"></script>
+	<script>
+		$(function(){
+			// 预览图
+			var btnLen = $('#shareClassWorkCont .accessoryList .accessory .wrap>button').length;//获取按钮的个数
+			for(var len=1;len<btnLen;len++){
+				$('#shareClassWorkCont .accessoryList .accessory .wrap>button').on('tap',function(){
+					$('#alertImg').show();
+					var imgHeight = $('#alertImg .wrap .imgs>img').eq(len).height();
+					var wrapHeight = $('#alertImg .wrap .imgs').height();
+					if(imgHeight > wrapHeight){
+						$('#alertImg .wrap .imgs').css('overflow-y','scroll');
+					}else{
+						$('#alertImg .wrap').css('height',imgHeight);
+						$('#alertImg .wrap .imgs').css('height',imgHeight);
+					}
+				});
+			}
+
+			$('#alertImg .close').on('tap',function(){
+				$('#alertImg').hide();
+			})
+		})
+	</script>
+</body>
+</html>
